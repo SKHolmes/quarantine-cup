@@ -4,6 +4,8 @@
   "description": "Virtual drinking game to have fun with friends while quarantined",
   "main": "index.js",
   "dependencies": {
+    "@material-ui/core": "^4.9.7",
+    "@material-ui/styles": "^4.9.6",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",

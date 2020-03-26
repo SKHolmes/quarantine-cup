@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { GoogleLogin } from 'react-google-login';
 
 function App() {
+  const [signedIn, setSignedIn] = useState([]);
+
+  const googleLoginSuccess = response => {
+    console.log(response.profileObj.name);
+    setSignedIn([...signedIn, response.profileObj.name]);
+  };
+
+  const googleLoginFailure = response => {
+    console.log('Something went wrong with the login. Ask the big man.');
+  };
+
+  useEffect(() => {
+    console.log(`signedIn has changed, it is now ${signedIn}`);
+  }, [signedIn]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GoogleLogin
+      clientId='121431919294-gd4pja6n0j259ntk3jhe70h49i24cf78.apps.googleusercontent.com'
+      buttonText='Login'
+      onSuccess={googleLoginSuccess}
+      onFailure={googleLoginFailure}
+      cookiePolicy={'single_host_origin'}
+    />
   );
 }
 

@@ -1,0 +1,33 @@
+{
+  "name": "quarantine-cup",
+  "version": "1.0.0",
+  "description": "Virtual drinking game to have fun with friends while quarantined",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SKHolmes/quarantine-cup.git"
+  },
+  "keywords": [
+    "game",
+    "quarantine",
+    "kings",
+    "cup"
+  ],
+  "author": "Samual Holmes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SKHolmes/quarantine-cup/issues"
+  },
+  "homepage": "https://github.com/SKHolmes/quarantine-cup#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "12.13.1"
+  }
+}
